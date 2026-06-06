@@ -1,9 +1,50 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Signed2048" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Signed2048" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/light_accent</item>
+        <item name="colorOnPrimary">@color/light_on_accent</item>
+        <item name="colorPrimaryContainer">@color/light_score_card</item>
+        <item name="colorOnPrimaryContainer">@color/light_text_primary</item>
+        <item name="colorSurface">@color/light_surface</item>
+        <item name="colorOnSurface">@color/light_text_primary</item>
+        <item name="colorSurfaceVariant">@color/light_score_card</item>
+        <item name="colorOnSurfaceVariant">@color/light_text_secondary</item>
+        <item name="android:colorBackground">@color/light_background</item>
+        <item name="android:windowBackground">@color/light_background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialog.Signed2048</item>
+        <item name="materialAlertDialogTheme">@style/AlertDialog.Signed2048</item>
+        <item name="fontFamily">@font/vazir</item>
+        <item name="android:fontFamily">@font/vazir</item>
+
     </style>
 
-    <style name="Theme.Signed2048" parent="Base.Theme.Signed2048" />
+    <style name="BottomSheetDialog.Signed2048"
+        parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheet.Signed2048</item>
+    </style>
+
+    <style name="BottomSheet.Signed2048"
+        parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@color/light_surface</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.BottomSheet</item>
+    </style>
+
+    <style name="ShapeAppearance.BottomSheet"
+        parent="ShapeAppearance.Material3.Corner.ExtraLarge">
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="AlertDialog.Signed2048"
+        parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurface">@color/light_surface</item>
+        <item name="android:gravity">end</item>
+        <item name="android:textAlignment">viewEnd</item>
+    </style>
+
+
 </resources>

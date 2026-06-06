@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="dark_background">#0D0D0D</color>
+    <color name="dark_surface">#1A1A1A</color>
+    <color name="dark_score_card">#1F1F1F</color>
+    <color name="dark_accent">#FF6B00</color>
+    <color name="dark_on_accent">#FFFFFF</color>
+    <color name="dark_text_primary">#F5F5F5</color>
+    <color name="dark_text_secondary">#999999</color>
+
+    <color name="light_background">#FAF3E0</color>
+    <color name="light_surface">#FFF8EE</color>
+    <color name="light_score_card">#FFECD0</color>
+    <color name="light_accent">#C05000</color>
+    <color name="light_on_accent">#FFFFFF</color>
+    <color name="light_text_primary">#1A1208</color>
+    <color name="light_text_secondary">#7A6A50</color>
 </resources>

@@ -1,7 +1,43 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Signed2048" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Signed2048" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/dark_accent</item>
+        <item name="colorOnPrimary">@color/dark_on_accent</item>
+        <item name="colorPrimaryContainer">@color/dark_score_card</item>
+        <item name="colorOnPrimaryContainer">@color/dark_text_primary</item>
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="colorOnSurface">@color/dark_text_primary</item>
+        <item name="colorSurfaceVariant">@color/dark_score_card</item>
+        <item name="colorOnSurfaceVariant">@color/dark_text_secondary</item>
+        <item name="android:colorBackground">@color/dark_background</item>
+        <item name="android:windowBackground">@color/dark_background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialog.Signed2048.Night</item>
+        <item name="materialAlertDialogTheme">@style/AlertDialog.Signed2048.Night</item>
+        <item name="fontFamily">@font/vazir</item>
+        <item name="android:fontFamily">@font/vazir</item>
+
     </style>
+
+    <style name="BottomSheetDialog.Signed2048.Night"
+        parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheet.Signed2048.Night</item>
+    </style>
+
+    <style name="BottomSheet.Signed2048.Night"
+        parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@color/dark_surface</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.BottomSheet</item>
+    </style>
+
+    <style name="AlertDialog.Signed2048.Night"
+        parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="android:gravity">end</item>
+        <item name="android:textAlignment">viewEnd</item>
+    </style>
+
 </resources>

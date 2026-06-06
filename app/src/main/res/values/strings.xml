@@ -1,3 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- اپ -->
     <string name="app_name">2048</string>
+    <string name="btn_new_game">بازی جدید</string>
+    <string name="btn_undo">برگشت</string>
+    <string name="btn_menu">منو</string>
+
+    <!-- منو -->
+    <string name="menu_title">تنظیمات</string>
+    <string name="menu_dark_theme">حالت شب</string>
+    <string name="menu_win_target">هدف بازی</string>
+    <string name="menu_rating">امتیاز به بازی ۲۰۴۸ علامت‌دار</string>
+    <string name="menu_score">اشتراک‌گذاری امتیاز</string>
+    <string name="menu_contact">ارتباط با سازنده</string>
+    <string name="menu_about">درباره بازی</string>
+
+    <!-- اشتراک‌گذاری -->
+    <string name="share_subject">بازی Signed 2048</string>
+
+    <string name="share_text">🎮 چالش 2048 علامت‌دار!\nامتیاز این دور: %1$d\nرکورد شخصی: %2$d\n\nبیا و ببین می‌تونی از من بهتر بازی کنی؟ 💪\n\n📥 دانلود از کافه بازار:\nhttps://cafebazaar.ir/app/com.sadegh4j.signed2048\n\n📥 دانلود از مایکت:\nhttps://myket.ir/app/com.sadegh4j.signed2048</string>
+    <string name="share_chooser">اشتراک‌گذاری</string>
+
+    <!-- ارتباط -->
+    <string name="contact_subject">Signed 2048 — بازخورد</string>
+    <string name="no_email_app">اپ ایمیل یافت نشد</string>
+
+    <!-- دیالوگ‌ها -->
+    <string name="dialog_exit_title">خروج</string>
+    <string name="dialog_exit_message">از بازی خارج می‌شوید؟</string>
+    <string name="dialog_new_game_title">بازی جدید</string>
+    <string name="dialog_new_game_message">بازی فعلی پاک می‌شود. ادامه می‌دهید؟</string>
+    <string name="dialog_game_over_title">بازی تموم شد!</string>
+    <string name="dialog_game_over_message">هیچ حرکتی ممکن نیست.\nامتیاز: %1$d</string>
+    <string name="dialog_win_title">بردی!</string>
+    <string name="dialog_win_message">به %1$s رسیدی!\nامتیاز: %2$d</string>
+    <string name="dialog_btn_yes">بله</string>
+    <string name="dialog_btn_no">خیر</string>
+    <string name="dialog_btn_new_game">بازی مجدد</string>
+    <string name="dialog_btn_continue">ادامه</string>
+
+    <!-- درباره -->
+    <string name="about_title">SIGNED 2048</string>
+    <string name="about_ok">باشه</string>
+
+    <string name="about_text">
+    هدف: تایل‌های هم‌مقدار را با کشیدن در چهار جهت ادغام کن تا به عدد هدف برسی.\n\n
+    قوانین ادغام:\n\n
+    دو تایل مثبت مساوی ادغام و دو برابر می‌شوند\n
+    نمونه: 8 = 4 + 4  (امتیاز 8+)\n\n
+    دو تایل منفی مساوی ادغام و دو برابر می‌شوند\n
+    نمونه: 8- = 4- + 4-  (امتیاز 8-)\n\n
+    یک تایل مثبت و منفی هم‌مقدار هر دو حذف می‌شوند\n
+    نمونه: حذف = (4-) + 4  (بدون تغییر امتیاز)\n\n
+    امتیاز با ادغام مثبت افزایش و با ادغام منفی کاهش می‌یابد.
+    </string>
+
+    <!-- امتیاز -->
+    <string name="label_score">امتیاز</string>
+    <string name="label_best">بهترین</string>
 </resources>
