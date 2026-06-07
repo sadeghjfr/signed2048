@@ -18,7 +18,7 @@
         android:textColor="?attr/colorPrimary"
         android:letterSpacing="0.08"
         android:lineSpacingMultiplier="0.9"
-        android:fontFamily="@font/telma"
+        android:fontFamily="@font/black_ops"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +91,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="بهترین"
+                    android:text="رکورد"
                     android:textSize="10sp"
                     android:textColor="?attr/colorOnSurfaceVariant"
                     android:fontFamily="sans-serif-condensed" />

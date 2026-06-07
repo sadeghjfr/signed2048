@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun applyFont() {
         val typeface =
-            resources.getFont(R.font.telma)
+            resources.getFont(R.font.black_ops)
         tvTitle.typeface  = typeface
         txtScore.typeface = typeface
         txtBest.typeface  = typeface
