@@ -16,11 +16,14 @@ import com.sadegh4j.signed2048.data.PreferencesManager
 import com.sadegh4j.signed2048.model.GameState
 import com.sadegh4j.signed2048.viewmodel.GameViewModel
 import com.sadegh4j.signed2048.viewmodel.GameViewModelFactory
+import java.text.DecimalFormat
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var viewModel: GameViewModel
     private lateinit var gameView: GameView
+    private lateinit var titleScore: TextView
+    private lateinit var titleRecord: TextView
     private lateinit var txtScore: TextView
     private lateinit var txtBest: TextView
     private lateinit var tvTitle: TextView
@@ -69,6 +72,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun bindViews() {
         gameView = findViewById(R.id.gameView)
+        titleScore = findViewById(R.id.titleScore)
+        titleRecord = findViewById(R.id.titleRecord)
         txtScore = findViewById(R.id.txtScore)
         txtBest = findViewById(R.id.txtBest)
         tvTitle = findViewById(R.id.tvTitle)
@@ -82,6 +87,8 @@ class MainActivity : AppCompatActivity() {
     private fun applyFont() {
         val typeface =
             resources.getFont(R.font.black_ops)
+        titleScore.typeface  = typeface
+        titleRecord.typeface  = typeface
         tvTitle.typeface  = typeface
         txtScore.typeface = typeface
         txtBest.typeface  = typeface
@@ -126,8 +133,12 @@ class MainActivity : AppCompatActivity() {
         val isDark = AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
 
         gameView.updateCells(state.cells, isDark)
-        txtScore.text = state.score.toString()
-        txtBest.text = state.best.toString()
+
+        val formatter = DecimalFormat("#,###")
+
+        txtBest.text  = formatBigNumber(state.best.toLong())
+        txtScore.text = formatBigNumber(state.score.toLong())
+
 
         if (state.isGameOver && !gameOverShowing) {
             gameOverShowing = true
@@ -141,6 +152,24 @@ class MainActivity : AppCompatActivity() {
         // فقط موقعی ریست میشه که بازی جدید شروع شده باشه
         if (!state.isGameWon && state.cells.all { row -> row.all { it == 0 || it == 2 || it == 4 } })
             gameWonShowing = false
+    }
+
+
+    fun formatBigNumber(number: Long): String {
+        if (number < 1000) return number.toString()
+
+        val suffixes = arrayOf("", "K", "M", "B", "T")
+        val exp = (Math.log10(number.toDouble()) / 3).toInt()
+
+        // محاسبه عدد خلاصه شده با یک رقم اعشار
+        val shortened = number / Math.pow(10.0, (exp * 3).toDouble())
+
+        // اگر رقم اعشار صفر بود (مثلا 145.0)، اعشار را حذف میکند تا بشود 145M
+        return if (shortened % 1 == 0.0) {
+            String.format("%.0f%s", shortened, suffixes[exp])
+        } else {
+            String.format("%.1f%s", shortened, suffixes[exp])
+        }
     }
 
     // ─── Dialogs ─────────────────────────────────────────────────
