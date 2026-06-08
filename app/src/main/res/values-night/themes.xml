@@ -36,8 +36,7 @@
     <style name="AlertDialog.Signed2048.Night"
         parent="ThemeOverlay.Material3.MaterialAlertDialog">
         <item name="colorSurface">@color/dark_surface</item>
-        <item name="android:gravity">end</item>
-        <item name="android:textAlignment">viewEnd</item>
+        <item name="android:layoutDirection">ltr</item>
     </style>
 
 </resources>

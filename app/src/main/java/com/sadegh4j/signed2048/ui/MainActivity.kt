@@ -84,25 +84,15 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-   /* private fun applyFont() {
-        val typeface =
-            resources.getFont(R.font.black_ops)
-        titleScore.typeface  = typeface
-        titleRecord.typeface  = typeface
-        tvTitle.typeface  = typeface
-        txtScore.typeface = typeface
-        txtBest.typeface  = typeface
-    }*/
-
     private fun setupBackHandler() {
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 viewModel.saveOnExit()
                 MaterialAlertDialogBuilder(this@MainActivity)
-                    .setTitle("خروج")
-                    .setMessage("از بازی خارج می‌شوید؟")
-                    .setPositiveButton("خروج") { _, _ -> finishAffinity() }
-                    .setNegativeButton("ادامه", null)
+                    .setTitle("Exit")
+                    .setMessage("Are you sure you want to quit?")
+                    .setPositiveButton("Quit") { _, _ -> finishAffinity() }
+                    .setNegativeButton("Cancel", null)
                     .show()
             }
         })
@@ -176,27 +166,27 @@ class MainActivity : AppCompatActivity() {
 
     private fun confirmReset() {
         MaterialAlertDialogBuilder(this)
-            .setTitle("بازی جدید")
-            .setMessage("بازی فعلی پاک می‌شود. ادامه می‌دهید؟")
-            .setPositiveButton("بله") { _, _ -> viewModel.resetGame() }
-            .setNegativeButton("خیر", null)
+            .setTitle("New Game")
+            .setMessage("Current game will be lost. Continue?")
+            .setPositiveButton("Reset") { _, _ -> viewModel.resetGame() }
+            .setNegativeButton("Cancel", null)
             .show()
     }
 
     private fun showGameOverDialog() {
         MaterialAlertDialogBuilder(this)
-            .setTitle("بازی تموم شد!")
-            .setMessage("هیچ حرکتی ممکن نیست.\nامتیاز: ${viewModel.currentScore()}")
-            .setPositiveButton("بازی مجدد") { _, _ -> viewModel.resetGame() }
+            .setTitle("Game Over!")
+            .setMessage("No moves left.\nScore: ${viewModel.currentScore()}")
+            .setPositiveButton("New Game") { _, _ -> viewModel.resetGame() }
             .setCancelable(false)
             .show()
     }
 
     private fun showGameWonDialog() {
         MaterialAlertDialogBuilder(this)
-            .setTitle("🎉 بردی!")
-            .setMessage("به ${viewModel.currentWinTarget().label} رسیدی!\nامتیاز: ${viewModel.currentScore()}")
-            .setPositiveButton("بازی مجدد") { _, _ -> viewModel.resetGame() }
+            .setTitle("You Won! 🎉")
+            .setMessage("Reached ${viewModel.currentWinTarget().label}!\nScore: ${viewModel.currentScore()}")
+            .setPositiveButton("New Game") { _, _ -> viewModel.resetGame() }
             .setCancelable(false)
             .show()
     }

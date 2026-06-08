@@ -68,7 +68,7 @@ class GameEngine {
 
         val result = Array(4) { row ->
             val line    = rotated[row]
-            val (merged, s, w) = mergeLine(line)
+            val (merged, s, w) = mergeLine(line, 0)
             score += s
             if (w) won = true
             merged

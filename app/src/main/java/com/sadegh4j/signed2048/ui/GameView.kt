@@ -6,6 +6,7 @@ import android.graphics.*
 import android.graphics.LinearGradient
 import android.graphics.Shader
 import android.util.AttributeSet
+import android.util.Log
 import android.view.MotionEvent
 import android.view.animation.DecelerateInterpolator
 import androidx.appcompat.widget.AppCompatImageView
@@ -299,6 +300,7 @@ class GameView @JvmOverloads constructor(
                 if (!movePending) return true
                 val dx = touchStartX - event.rawX
                 val dy = touchStartY - event.rawY
+
                 val direction = when {
                     abs(dx) > 10 && abs(dx) > 2 * abs(dy) ->
                         if (dx > 0) GameEngine.Direction.LEFT else GameEngine.Direction.RIGHT

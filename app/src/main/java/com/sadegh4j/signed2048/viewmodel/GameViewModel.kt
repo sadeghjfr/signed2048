@@ -1,5 +1,6 @@
 package com.sadegh4j.signed2048.viewmodel
 
+import android.util.Log
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
