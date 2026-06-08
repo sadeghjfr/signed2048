@@ -17,8 +17,8 @@
         <item name="android:windowLightStatusBar">false</item>
         <item name="bottomSheetDialogTheme">@style/BottomSheetDialog.Signed2048.Night</item>
         <item name="materialAlertDialogTheme">@style/AlertDialog.Signed2048.Night</item>
-        <item name="fontFamily">@font/vazir</item>
-        <item name="android:fontFamily">@font/vazir</item>
+        <item name="fontFamily">@font/black_ops</item>
+        <item name="android:fontFamily">@font/black_ops</item>
 
     </style>
 

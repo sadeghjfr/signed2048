@@ -80,11 +80,11 @@ class MainActivity : AppCompatActivity() {
         btnRefresh = findViewById(R.id.btnRefresh)
         btnUndo = findViewById(R.id.btnUndo)
         btnMenu = findViewById(R.id.btnMenu)
-        applyFont()
+        //applyFont()
 
     }
 
-    private fun applyFont() {
+   /* private fun applyFont() {
         val typeface =
             resources.getFont(R.font.black_ops)
         titleScore.typeface  = typeface
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
         tvTitle.typeface  = typeface
         txtScore.typeface = typeface
         txtBest.typeface  = typeface
-    }
+    }*/
 
     private fun setupBackHandler() {
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {

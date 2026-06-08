@@ -128,19 +128,7 @@ class MenuBottomSheet : BottomSheetDialogFragment() {
 
         // ─── ارتباط ───
         view.findViewById<LinearLayout>(R.id.llContact).setOnClickListener {
-            val intent = Intent(Intent.ACTION_SENDTO).apply {
-                data = "mailto:sadeghjfr22@gmail.com".toUri()
-                putExtra(Intent.EXTRA_SUBJECT, getString(R.string.contact_subject))
-            }
-            if (intent.resolveActivity(requireActivity().packageManager) != null) {
-                startActivity(intent)
-            } else {
-                Toast.makeText(
-                    requireContext(),
-                    getString(R.string.no_email_app),
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
+            ContactDialog().show(parentFragmentManager, "contact")
             dismiss()
         }
 
