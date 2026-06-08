@@ -53,12 +53,14 @@ class MenuBottomSheet : BottomSheetDialogFragment() {
                 WinTarget.T1024  -> R.id.rb1024
                 WinTarget.T2048  -> R.id.rb2048
                 WinTarget.T4096 -> R.id.rb4096
+                WinTarget.T8192 -> R.id.rb8192
             }
         )
         radioGroup.setOnCheckedChangeListener { _, id ->
             val target = when (id) {
                 R.id.rb1024  -> WinTarget.T1024
                 R.id.rb4096 -> WinTarget.T4096
+                R.id.rb8192 -> WinTarget.T8192
                 else          -> WinTarget.T2048
             }
             onWinTargetChange?.invoke(target)

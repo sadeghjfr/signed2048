@@ -36,7 +36,8 @@ data class GameState(
 }
 
 enum class WinTarget(val value: Int, val label: String) {
-    T1024(16, "16"),
+    T1024(1024, "1024"),
     T2048(2048, "2048"),
-    T4096(4096, "4096")
+    T4096(4096, "4096"),
+    T8192(8192, "8192")
 }

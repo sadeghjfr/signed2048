@@ -55,7 +55,7 @@
             android:id="@+id/switchTheme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="24dp"
+            android:paddingEnd="16dp"
             android:checked="true" />
     </LinearLayout>
 
@@ -104,27 +104,40 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:buttonTint="?attr/colorPrimary"
             android:text="1024"
-            android:textColor="?attr/colorOnSurface"
-            android:buttonTint="?attr/colorPrimary" />
+            android:textColor="?attr/colorOutline"
+            android:textSize="12sp" />
 
         <RadioButton
             android:id="@+id/rb2048"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:buttonTint="?attr/colorPrimary"
             android:text="2048"
-            android:textColor="?attr/colorOnSurface"
-            android:buttonTint="?attr/colorPrimary" />
+            android:textColor="?attr/colorOutline"
+            android:textSize="12sp" />
 
         <RadioButton
             android:id="@+id/rb4096"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:buttonTint="?attr/colorPrimary"
             android:text="4096"
-            android:textColor="?attr/colorOnSurface"
-            android:buttonTint="?attr/colorPrimary" />
+            android:textColor="?attr/colorOutline"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rb8192"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="?attr/colorPrimary"
+            android:text="8192"
+            android:textColor="?attr/colorOutline"
+            android:textSize="12sp" />
     </RadioGroup>
 
     <com.google.android.material.divider.MaterialDivider
